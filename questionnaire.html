@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Election Sénégal 2024 - Questionnaire</title>
+</head>
+<body>
+
+    <p>{{ message}}</p>
+
+    <h1>Questionnaire</h1>
+    <h2> Veiller remplir ce formulaire S.V.P</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeI5vMDweo92u33H-e33iseeEZ3Utin9isn69OsKoCyjQZ7bQ/viewform?embedded=true" width="640" height="2621" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Soumettre</button>
+    </form>
+</body>
+</html>
+
